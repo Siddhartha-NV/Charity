@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You - HopeHaven</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .thank-you-container {
+      text-align: center;
+      margin-top: 20%;
+    }
+    .thank-you-box {
+      border: 2px solid #6c63ff;
+      padding: 20px;
+      display: inline-block;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+    .logo {
+      width: 150px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <img src="{%static 'logo.png'%}" alt="HopeHaven Logo" class="logo">
+        <h1 class="mt-3">HopeHaven</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 thank-you-container">
+        <div class="thank-you-box">
+          <h2>Thank you !</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    &copy; Copyright HopeHaven
+  </div>
+</body>
+</html>

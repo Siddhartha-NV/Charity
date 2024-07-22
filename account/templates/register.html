@@ -1,0 +1,73 @@
+{% load static %}
+
+{% for message in messages %}
+<h4>{{message}}</h4>
+{% endfor %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HopeHaven Registration</title>
+    <link rel="icon" href="{%static 'logoo.png'%}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .register-container {
+            margin-top: 10%;
+            border: 2px solid #6c3;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .register-container .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="register-container">
+                <div class="text-center mb-4">
+                    <img src="{%static 'logo.png'%}" alt="HopeHaven Logo" style="height: 50px;">
+                    <h2>HopeHaven</h2>
+                </div>
+                {%for message in messages%}
+                <h5>{{message}}</h5>
+                {% endfor %}
+                <form method="POST" action="register" autocomplete="off">
+                    {%csrf_token%}
+                    <div class="form-group">
+                        <label for="name">UserName</label>
+                        <input type="name" class="form-control" id="email" placeholder="Enter name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="create-password">Create Password</label>
+                        <input type="password" class="form-control" id="create-password" placeholder="Create password" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm password" name="password2">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" onclick="location.href='{% url 'login' %}'">Register</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <p>&copy; Copyright HopeHaven</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

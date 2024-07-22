@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - HopeHaven</title>
+    <link rel="icon" href="{%static 'logoo.png'%}">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar-custom {
+            background-color: #e0e0e0;
+        }
+        .navbar-brand img {
+            height: 50px;
+        }
+        .quote {
+            font-style: italic;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+        .contact-info {
+            margin: 20px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+        }
+        .contact-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">
+            <img src="{%static 'contact.png'%}" alt="HopeHaven Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{%url 'home'%}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{%url 'contact'%}">Contact Us</a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="quote">
+            “How Wonderful it is that nobody need to wait a single moment before starting to improve the world”
+        </div>
+        
+        <div class="row contact-info">
+            <div class="col-md-6">
+                <h3>Contact Us</h3>
+                <p>661 Kozey Heights, South Azucenaport, HI 46270</p>
+                <p><strong>Email</strong></p>
+                <p>hopehaven@gmail.com</p>
+                <p><strong>Phone</strong></p>
+                <p>+1 (253) 094-1468</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="{%static 'moneybag.png'%}" alt="Contact" class="contact-image">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; Copyright HopeHaven</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+</body>
+</html>
